@@ -13,5 +13,18 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/KOSA/OneDrive/문서/카카오톡 받은 파일/임시/com.springsource.org.apache.commons.fileupload-1.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KOSA/OneDrive/문서/카카오톡 받은 파일/임시/com.springsource.org.apache.commons.io-1.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KOSA/OneDrive/문서/카카오톡 받은 파일/임시/com.springsource.org.apache.commons.logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KOSA/OneDrive/문서/카카오톡 받은 파일/임시/javax.servlet.jsp.jstl-1.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KOSA/OneDrive/문서/카카오톡 받은 파일/임시/javax.servlet.jsp.jstl-api-1.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KOSA/OneDrive/문서/카카오톡 받은 파일/임시/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KOSA/OneDrive/문서/카카오톡 받은 파일/임시/spring-aop-5.3.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KOSA/OneDrive/문서/카카오톡 받은 파일/임시/spring-beans-5.3.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KOSA/OneDrive/문서/카카오톡 받은 파일/임시/spring-context-5.3.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KOSA/OneDrive/문서/카카오톡 받은 파일/임시/spring-core-5.3.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KOSA/OneDrive/문서/카카오톡 받은 파일/임시/spring-expression-5.3.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KOSA/OneDrive/문서/카카오톡 받은 파일/임시/spring-web-5.3.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KOSA/OneDrive/문서/카카오톡 받은 파일/임시/spring-webmvc-5.3.6.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

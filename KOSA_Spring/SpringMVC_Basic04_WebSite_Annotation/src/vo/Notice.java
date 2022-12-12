@@ -2,14 +2,26 @@ package vo;
 
 import java.util.Date;
 
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
+
 public class Notice {
 	private String seq;
 	private String title;
 	private String writer;
 	private Date regdate;
-	private String fileSrc;
+	private String fileSrc; //파일 이름
 	private int hit;
 	private String content;
+	
+	
+	private CommonsMultipartFile file; //파일 그자체
+	//단 조건: <input="file" name="file" 있는 상태>
+	public CommonsMultipartFile getFile() {
+		return file;
+	}
+	public void setFile(CommonsMultipartFile file) {
+		this.file = file;
+	}
 	
 	public String getFileSrc() {
 		return fileSrc;
@@ -53,5 +65,12 @@ public class Notice {
 	public void setContent(String content) {
 		this.content = content;
 	}
+	@Override
+	public String toString() {
+		return "Notice [seq=" + seq + ", title=" + title + ", writer=" + writer + ", regdate=" + regdate + ", fileSrc="
+				+ fileSrc + ", hit=" + hit + ", content=" + content + ", file=" + file + "]";
+	}
+
+	
 	
 }
