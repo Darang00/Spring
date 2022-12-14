@@ -60,12 +60,10 @@ CREATE TABLE board
 
 select * from board;
 
-desc guest
+desc guest;
 
-select * from guest where name = ''
-select * from guest where email = ''
 
-select * from guestwhere name='a' and  no =1
+select * from guest where name='a' and  no =1;
 
 
 SELECT * FROM
