@@ -47,17 +47,15 @@ public class Notice {
 	/////////////////////////////////////////////////////////////
 	
 	
+	public String getFileSrc() {
+		return fileSrc;
+	}
 	public String getFileSrc2() {
 		return fileSrc2;
 	}
 	public void setFileSrc2(String fileSrc2) {
 		this.fileSrc2 = fileSrc2;
 	}
-	
-	public String getFileSrc() {
-		return fileSrc;
-	}
-	
 	public void setFileSrc(String fileSrc) {
 		this.fileSrc = fileSrc;
 	}

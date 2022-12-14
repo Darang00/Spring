@@ -29,6 +29,18 @@
  <bean id=""  class="org.springframework.jdbc.core.JdbcTemplate">
  	<property name="dataSource"  ref="driverManagerDataSource" />
  </bean> 
+ 
+ <!-- MyBatis 설정하기-->
+ <bean id="sqlSessionFactoryBean"  class="org.mybatis.spring.SqlSessionFactoryBean">
+    <property name="dataSource" ref="driverManagerDataSource"></property>
+    <property name="mapperLocations" value="classpath*:mapper/*xml" />
+</bean> 
+
+<!-- factory를 injection -->
+<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+  <constructor-arg index="0" ref="sqlSessionFactoryBean"/>
+</bean>
+ <!-- MyBatis 설정 END-->
   
  
  <!-- 공통 UI  -->

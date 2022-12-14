@@ -28,6 +28,7 @@ IOC 컨테이너에 적재될 bean 객체 생성과 injection (DI)
 <context:annotation-config />
 <context:component-scan base-package="ncontroller"  />
 <context:component-scan base-package="dao"  />
+<context:component-scan base-package="service"  />
 
 <!-- 파일 업로드 보조(반드시)  -->
 <bean  id="multipartResolver"    class="org.springframework.web.multipart.commons.CommonsMultipartResolver">

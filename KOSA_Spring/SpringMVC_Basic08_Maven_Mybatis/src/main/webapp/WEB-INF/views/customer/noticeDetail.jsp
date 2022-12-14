@@ -70,7 +70,7 @@
 								첨부파일_1
 							</dt>
 							<dd class="article-detail-data">
-								${notice.fileSrc}
+								<a href="download.htm?p=upload&f=${notice.fileSrc}">${notice.fileSrc}</a>
 							</dd>
 						</dl>
 						<dl class="article-detail-row">
@@ -78,9 +78,10 @@
 								첨부파일_2
 							</dt>
 							<dd class="article-detail-data">
-								${notice.fileSrc2}
+								<a href="download.htm?p=upload&f=${notice.fileSrc2}">${notice.fileSrc2}</a>
 							</dd>
 						</dl>
+						
 						<div class="article-content" >
 							${notice.content}
 						</div>
