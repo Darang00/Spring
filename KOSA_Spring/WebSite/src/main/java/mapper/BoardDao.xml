@@ -5,47 +5,46 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <!-- 
 	//게시물 개수
-	int getCount(String field, String query);
+	int getBoardCount(String field, String query) throws ClassNotFoundException, SQLException;
 	
 	//전체 게시물
-	List<Board> getBoards(int page, String field, String query);
+	List<Board> boardList(int page, String field, String query) throws ClassNotFoundException, SQLException;
 	
+	//게시물 삭제(delete)
+	int boardDelete(String seq) throws ClassNotFoundException, SQLException;
 	
-	//게시물 삭제
-	int delete(String seq);
-	
-	//게시물 수정
-	int update(Board board);
+	//게시물 수정(update)
+	int boardUpdate(Board board) throws ClassNotFoundException, SQLException;
 	
 	//게시물 상세
-	Board boardDetail(String seq);
+	Board boardDetail(String seq) throws ClassNotFoundException, SQLException;
 	
-	//게시물 입력
-	int insert(Board n);
+	//게시물 입력(insert)
+	int boardWrite(Board n) throws ClassNotFoundException, SQLException;
  -->
  
- <mapper namespace="dao.NoticeDao">
+ <mapper namespace="dao.BoardDao">
  
- <select id="getCount" resultType="int">
- 	select count(*) from notices where ${param1} like '%${param2}%'
+ <select id="getBoardCount" resultType="int">
+ 	select count(*) from board where ${param1} like '%${param2}%'
  </select>
  
- <select id="getBoards" resultType="dto.Board">
+ <select id="boardList" resultType="dto.Board">
 	SELECT * FROM
 		(SELECT ROWNUM NUM, N.*
 			FROM(
 				SELECT *
 				FROM board
-				WHERE ${param2} LIKE '%${param3}%' ORDER BY REGDATE DESC
+				WHERE ${param2} LIKE '%${param3}%' ORDER BY writedate DESC
 			) N
 		) WHERE NUM BETWEEN 1 + (${param1} -1)*5 AND 5 + (${param1}-1)*5
  </select>
  
- <delete id="delete">
+ <delete id="boardDelete">
  	DELETE FROM board where seq=#{seq}
  </delete>
  
- <update id="update" parameterType="dto.Board">
+ <update id="boardUpdate" parameterType="dto.Board">
  UPDATE board
  SET title=#{title},
  	 content=#{content},
@@ -58,15 +57,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  	SELECT title,
  			writer,
  			content,
- 			regdate,
+ 			writedate,
  			hit,
  			filesrc,
  			filesrc2
     FROM board where seq=#{seq}
  </select>
  
- <insert id="insert" parameterType="int">
- 	INSERT INTO board(seq, title, content, writer, regdate, hit, filesrc, filesrc2)
+ <insert id="boardWrite" parameterType="int">
+ 	INSERT INTO board(seq, title, content, writer, writedate, hit, filesrc, filesrc2)
  	VALUES (#{seq}, #{title}, #{content}, #{writer}, sysdate, 0, #{filerc}, #{filesrc2})
  </insert>
  </mapper>

@@ -1,5 +1,6 @@
 package dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import dto.Board;
@@ -9,21 +10,21 @@ import dto.Board;
 public interface BoardDao {
 	
 	//게시물 개수
-	int getCount(String field, String query);
+	int getBoardCount(String field, String query) throws ClassNotFoundException, SQLException;
 	
 	//전체 게시물
-	List<Board> getBoards(int page, String field, String query);
+	List<Board> boardList(int page, String field, String query) throws ClassNotFoundException, SQLException;
 	
-	//게시물 삭제
-	int delete(String seq);
+	//게시물 삭제(delete)
+	int boardDelete(String seq) throws ClassNotFoundException, SQLException;
 	
-	//게시물 수정
-	int update(Board board);
+	//게시물 수정(update)
+	int boardUpdate(Board board) throws ClassNotFoundException, SQLException;
 	
 	//게시물 상세
-	Board boardDetail(String seq);
+	Board boardDetail(String seq) throws ClassNotFoundException, SQLException;
 	
-	//게시물 입력
-	int insert(Board n);
+	//게시물 입력(insert)
+	int boardWrite(Board n) throws ClassNotFoundException, SQLException;
 
 }

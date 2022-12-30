@@ -11,7 +11,6 @@ public class Member {
 	private String pwd;
 	private String name;
 	private String gender;
-	private String is_lunar;
 	private String phone;
 	private String email;
 	private Date joindate;

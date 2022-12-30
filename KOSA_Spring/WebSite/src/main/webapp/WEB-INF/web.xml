@@ -37,23 +37,23 @@
 	</filter-mapping>
   <servlet>
     <description></description>
-    <display-name>ItemsController</display-name>
-    <servlet-name>ItemsController</servlet-name>
-    <servlet-class>kr.or.kosa.ItemsController</servlet-class>
+    <display-name>BoardController</display-name>
+    <servlet-name>BoardController</servlet-name>
+    <servlet-class>kr.or.kosa.BoardController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ItemsController</servlet-name>
-    <url-pattern>/ItemsController</url-pattern>
+    <servlet-name>BoardController</servlet-name>
+    <url-pattern>/BoardController</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>joinUsController</display-name>
-    <servlet-name>joinUsController</servlet-name>
-    <servlet-class>kr.or.kosa.joinUsController</servlet-class>
+    <display-name>JoinController</display-name>
+    <servlet-name>JoinController</servlet-name>
+    <servlet-class>kr.or.kosa.JoinController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>joinUsController</servlet-name>
-    <url-pattern>/joinUsController</url-pattern>
+    <servlet-name>JoinController</servlet-name>
+    <url-pattern>/JoinController</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>

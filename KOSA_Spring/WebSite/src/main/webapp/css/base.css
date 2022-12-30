@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
 body {
 	color:#808080;
 	font-size: 11px;
-	font-family:"맑은 고딕", "고딕", sans-serif;
+   	background: #FFF0F5;
+	font-family: 'Heebo', sans-serif;
 }
 
 a{
@@ -9,6 +13,33 @@ a{
 	text-decoration: none;
 }
 
+Button {
+    margin: 5px;
+}
+
+.w-btn {
+margin: 5px;
+    width:10%;
+	height:6%;
+	font-family: 'Heebo', sans-serif;
+   text-align: center;
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    font-size:10px;
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+.w-btn-gra1 {
+    background: linear-gradient(-45deg, #33ccff 0%, #ff99cc 100%);
+    color: white;
+}
 .strong
 {
 	color:#fd7e00;
@@ -105,7 +136,8 @@ a{
 	text-decoration: underline;
 }
 
-.button{
+.Button{
+	font-family: 'Heebo', sans-serif;
 	display:inline-block;
 	border:0px;
 	text-indent: -999px;

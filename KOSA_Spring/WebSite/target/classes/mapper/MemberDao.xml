@@ -20,8 +20,8 @@
  -->
  
  <insert id="insertMember" parameterType="dto.Member">
-	 insert into member(memberid, pwd, name, gender, is_lunar, phone, email, joindate)
-	 values(#{memberid}, #{pwd}, #{name}, #{gender}, #{is_lunar}, #{phone}, #{email}, sysdate)
+	 insert into member(memberid, pwd, name, gender, phone, email, joindate)
+	 values(#{memberid}, #{pwd}, #{name}, #{gender}, #{phone}, #{email}, sysdate)
  </insert>
  
  <select id="idCheck" resultType="int">
