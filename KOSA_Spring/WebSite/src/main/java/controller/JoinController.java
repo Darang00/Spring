@@ -49,8 +49,8 @@ public class JoinController {
 	}
 	
 	@RequestMapping(value="idcheck.htm", method=RequestMethod.POST)
-	public View idCheck(@RequestParam("memberid") String memberid, Model model) {
-		int result = joinService.idCheck(memberid);
+	public View idCheck(@RequestParam("userid") String userid, Model model) {
+		int result = joinService.idCheck(userid);
 		if(result >0) {
 			System.out.println("아이디 중복");
 			model.addAttribute("result", "fail");

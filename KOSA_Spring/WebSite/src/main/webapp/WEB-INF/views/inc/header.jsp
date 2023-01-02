@@ -32,24 +32,20 @@
 					<li>
 						<a href="${pageContext.request.contextPath}/index.htm">HOME</a>
 					</li>
-					<!-- Spring security tags lib 사용 -->
-					<%-- <se:authorize access="!hasRole('ROLE_USER')">
-						 <li><a href="${pageContext.request.contextPath}/member/login.htm">로그인</a></li>
-					</se:authorize> --%>
 					
 					
 					<!-- 인증이 성공하면 Spring  내부적으로 객체 생성 : userPrincipal 객체가 가지는 속성 값 : name -->
-					<se:authentication property="name" var="loginuser" />
+					<se:authentication property="name" var="userid" />
 					<!-- Spring security tags lib 사용 -->
 					<se:authorize access="!hasRole('ROLE_USER')">
 						 <li><a href="${pageContext.request.contextPath}/member/login.htm">로그인</a></li>
-						 <li><a href="${pageContext.request.contextPath}/member/join.htm">회원가입</a></li>
+						 <li><a href="${pageContext.request.contextPath}/join/join.htm">회원가입</a></li>
 					</se:authorize>
 					<se:authorize access="hasAnyRole('ROLE_USER')">	<!-- if문 처럼 사용 -->
-						<li><a href="${pageContext.request.contextPath}/logout">(${loginuser })로그아웃</a></li>
+						<li><a href="${pageContext.request.contextPath}/logout">반갑습니다 ${userid}님 :) <br> 로그아웃</a></li>
 					</se:authorize>
 					
-					 <li><a href="${pageContext.request.contextPath}/member/login.htm">로그인</a></li>
+					<%--  <li><a href="${pageContext.srequest.contextPath}/member/login.htm">로그인</a></li> --%>
 				</ul>
 				<h3 class="hidden">회원메뉴</h3>
 				<ul id="membermenu" class="clear">

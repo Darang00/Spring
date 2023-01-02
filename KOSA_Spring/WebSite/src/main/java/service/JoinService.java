@@ -20,9 +20,9 @@ public class JoinService {
 		return result;
 	}
 	
-	public int idCheck(String memberid) {
+	public int idCheck(String userid) {
 		MemberDao dao = sqlsession.getMapper(MemberDao.class);
-		int result = dao.idCheck(memberid);
+		int result = dao.idCheck(userid);
 		return result;
 	}
 	

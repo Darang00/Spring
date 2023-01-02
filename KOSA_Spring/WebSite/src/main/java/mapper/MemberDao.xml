@@ -6,13 +6,13 @@
 	public int insertMember(Member member);
 	
 	//아이디 체크
-	public int idCheck(String memberid);
+	public int idCheck(String userid);
 	
 	//로그인 체크
 	public int loginCheck(String name, String pwd);
 	
 	//회원 상세
-	public Member memberDetail(String memberid);
+	public Member memberDetail(String userid);
 	
 	//회원 수정
 	public int updateMember(Member member);
@@ -20,27 +20,27 @@
  -->
  
  <insert id="insertMember" parameterType="dto.Member">
-	 insert into member(memberid, pwd, name, gender, phone, email, joindate)
-	 values(#{memberid}, #{pwd}, #{name}, #{gender}, #{phone}, #{email}, sysdate)
+	 insert into member(userid, pwd, name, gender, phone, email, joindate)
+	 values(#{userid}, #{pwd}, #{name}, #{gender}, #{phone}, #{email}, sysdate)
  </insert>
  
  <select id="idCheck" resultType="int">
- 	select count(*) from member where memberid=#{param1}
+ 	select count(*) from member where userid=#{param1}
  </select>
  
  <select id="loginCheck" resultType="int">
- 	select count(*) from member where memberid=#{param1} and pwd=#{param2}
+ 	select count(*) from member where userid=#{param1} and pwd=#{param2}
  </select>
  
  <select id="memberDetail" resultType="dto.Member">
- 	select memberid, pwd, name, gender, is_lunar, phone, email, joindate
- 	from member where userid=#{memberid}
+ 	select userid, pwd, name, gender, phone, email, joindate
+ 	from member where userid=#{userid}
  </select>
  
  <update id="updateMember" parameterType="dto.Member">
- 	update member
+ 	update members
  	set pwd=#{pwd}, name=#{name}, phone=#{phone}, email=#{email}
- 	from member where memberid=#{memberid}
+ 	from member where userid=#{userid}
  </update>
 
 </mapper>

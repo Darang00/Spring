@@ -105,7 +105,6 @@ public class BoardService {
 	
 	//글쓰기 처리 서비스
 	public String boardWrite(Board board, HttpServletRequest request, Principal principal) {
-		System.out.println("글쓰기 처리 서비스 들어왔다");
 		List<CommonsMultipartFile> files = board.getFiles();
 		List<String> filenames = new ArrayList<String>(); //파일명 에러
 		
@@ -139,11 +138,10 @@ public class BoardService {
 		//파일명 (DTO)
 		board.setFilesrc(filenames.get(0));
 		board.setFilesrc2(filenames.get(1));
-		System.out.println("board: " + board.toString());
+
 		try {
 			//동기화
 			BoardDao boardDao = sqlsession.getMapper(BoardDao.class);
-			System.out.println("BoardService의 boardDao: "+boardDao);
 			boardDao.boardWrite(board); //DB insert
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -160,7 +158,7 @@ public class BoardService {
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
-		return "redirect:board.htm";
+		return "redirect:boardList.htm";
 	}
 	
 	//글 수정하기 서비스

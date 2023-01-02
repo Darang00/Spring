@@ -43,17 +43,22 @@ public class BoardController {
 		return "board/boardDetail";
 	}
 	
-	//글쓰기
+	//글쓰기 페이지 보이게 하기
 	@GetMapping(value="boardWrite.htm") //view 쪽에서 href에 boardWrite.htm이거 있어서 이 함수를 탄다. 
 	public String boardWrite() {
 		return "board/boardWrite";
 	}
 	
+	//글쓰기 처리 (DB에 insert)
 	@PostMapping(value="boardWrite.htm")
 	public String boardWrite(Board board, HttpServletRequest request, Principal principal) {
+		System.out.println("글쓰기 처리(DB에 insert) 컨트롤러 탔다");
 		String url = null;
+		System.out.println("principal: " + principal.toString());
+		
 		try {
 			url = boardService.boardWrite(board, request, principal);
+			System.out.println("url: " + url);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

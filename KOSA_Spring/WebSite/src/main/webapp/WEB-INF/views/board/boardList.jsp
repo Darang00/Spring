@@ -79,8 +79,7 @@
 						<%-- <se:authorize access="hasRole('ROLE_USER') AND hasRole('ROLE_ADMIN')"> --%>
 						<se:authorize access="hasRole('ROLE_USER')">
 							<a class="btn-write button" href="boardWrite.htm">글쓰기</a>
-						</se:authorize>
-							<a class="btn-write button" href="boardWrite.htm">글쓰기</a>
+						</se:authorize>	
 					</p>
 					
 					<p id="cur-page" class="margin-small">

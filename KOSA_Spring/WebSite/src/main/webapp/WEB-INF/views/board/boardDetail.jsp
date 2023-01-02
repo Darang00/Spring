@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="se" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -82,10 +84,16 @@
 						</div>
 					</div>
 					<p class="article-comment margin-small">
-						<a class="btn-list button" href="boardList.htm">목록</a>						
+						<a class="btn-list button" href="boardList.htm">목록</a>	
+						<se:authentication property="name" var="userid" />
+						<se:authorize access="hasRole('ROLE_USER')">
+						<c:if test= "${userid eq board.writer}" >
 						<a class="btn-edit button" href="boardUpdate.htm?seq=${board.seq}">수정</a>
 						<a class="btn-del button" href="boardDelete.htm?seq=${board.seq}">삭제</a>
+						</c:if>
+						</se:authorize>
 					</p>
+				
 					<div class="margin-small" style="border-top: 1px solid #dfdfdf;">
 						<dl class="article-detail-row">
 							<dt class="article-detail-title">

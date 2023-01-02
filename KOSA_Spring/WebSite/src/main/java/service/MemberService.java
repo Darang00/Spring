@@ -13,9 +13,11 @@ public class MemberService {
 	@Autowired
 	private SqlSession sqlsession;
 	
-	public Member getMember(String memberid) {
+	public Member getMember(String userid) {
+		System.out.println("getMember 서비스 탔다");
 		MemberDao dao = sqlsession.getMapper(MemberDao.class);
-		Member member = dao.memberDetail(memberid);
+		Member member = dao.memberDetail(userid);
+		System.out.println("member 리턴할거다: " + member.toString());
 		return member;
 	}
 	

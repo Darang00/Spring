@@ -45,9 +45,9 @@
 					<form action="${pageContext.request.contextPath}/login" method="post">                            
 						<fieldset>
                                 <legend class="hidden">로그인 폼</legend>
-                                <h3><img src="images/txtTitle.png" /></h3>
+                               <!--  <h3><img src="images/txtTitle.png" /></h3> -->
                                 <ul id="loginBox">
-                                    <li><label for="memberid">아이디</label>
+                                    <li><label for="userid">아이디</label>
                                     			<input type="text"        name="username" class="text" /></li>
                                     <li><label for="pwd">비밀번호</label>
                                     			<input type="password" name="password" class="text" /></li>

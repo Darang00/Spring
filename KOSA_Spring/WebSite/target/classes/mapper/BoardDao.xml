@@ -54,7 +54,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  </update>
  
  <select id="boardDetail" resultType="dto.Board">
- 	SELECT title,
+ 	SELECT  seq,
+ 			title,
  			writer,
  			content,
  			writedate,
@@ -64,8 +65,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     FROM board where seq=#{seq}
  </select>
  
- <insert id="boardWrite" parameterType="int">
+ <insert id="boardWrite" parameterType="dto.Board">
  	INSERT INTO board(seq, title, content, writer, writedate, hit, filesrc, filesrc2)
- 	VALUES (#{seq}, #{title}, #{content}, #{writer}, sysdate, 0, #{filerc}, #{filesrc2})
+ 	VALUES (board_seq.nextval, #{title}, #{content}, #{writer}, sysdate, 0, #{filesrc}, #{filesrc2})
  </insert>
  </mapper>

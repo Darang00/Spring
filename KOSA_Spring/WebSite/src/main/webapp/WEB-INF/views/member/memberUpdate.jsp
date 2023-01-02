@@ -27,7 +27,7 @@
 									아이디
 								</dt>
 								<dd class="join-form-data">
-									<input type="text" name="memberid"  value="${member.memberid }" disabled />
+									<input type="text" name="userid"  value="${member.userid }" disabled />
 								</dd>
 							</dl>
 							<dl class="join-form-row">
