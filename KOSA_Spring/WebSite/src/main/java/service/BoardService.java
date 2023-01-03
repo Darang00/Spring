@@ -109,7 +109,7 @@ public class BoardService {
 		List<String> filenames = new ArrayList<String>(); //파일명 에러
 		
 		if(files !=null && files.size() > 0) { //1개라도 업로드 된 파일이 존재하면
-			for(CommonsMultipartFile multifile : files) { //이건 뭔 문법일까....?
+			for(CommonsMultipartFile multifile : files) { //이건 뭔 문법일까 >> 개선된 for 문: files가 List 타입이므로 리스트 돌면서 뽑아내는거
 				String filename = multifile.getOriginalFilename();
 				String path = request.getServletContext().getRealPath("/board/upload"); //배포된 서버 경로
 				String fpath = path + "\\" + filename;
@@ -132,7 +132,7 @@ public class BoardService {
 					}
 				}
 			}			
-		}
+		} 
 		//인증되면 인증 객체의 정보를 받는다.
 		board.setWriter(principal.getName().trim());
 		//파일명 (DTO)

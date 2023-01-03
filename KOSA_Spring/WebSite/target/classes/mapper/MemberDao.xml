@@ -38,9 +38,9 @@
  </select>
  
  <update id="updateMember" parameterType="dto.Member">
- 	update members
- 	set pwd=#{pwd}, name=#{name}, phone=#{phone}, email=#{email}
- 	from member where userid=#{userid}
+ 	update member
+ 	set pwd=#{pwd}, gender=#{gender}, name=#{name}, phone=#{phone}, email=#{email}
+ 	where userid=#{userid}
  </update>
 
 </mapper>

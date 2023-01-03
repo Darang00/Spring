@@ -52,7 +52,6 @@ public class BoardController {
 	//글쓰기 처리 (DB에 insert)
 	@PostMapping(value="boardWrite.htm")
 	public String boardWrite(Board board, HttpServletRequest request, Principal principal) {
-		System.out.println("글쓰기 처리(DB에 insert) 컨트롤러 탔다");
 		String url = null;
 		System.out.println("principal: " + principal.toString());
 		

@@ -49,6 +49,7 @@
 				</ul>
 				<h3 class="hidden">회원메뉴</h3>
 				<ul id="membermenu" class="clear">
+				<se:authorize access="hasRole('ROLE_USER')">
 					<li>
 						<div class="Button">
 							<a href="${pageContext.request.contextPath}/member/mypage.htm">
@@ -56,6 +57,7 @@
 							</a>
 						</div>
 					</li>
+				</se:authorize>
 					<li>
 						<div class="Button">
 							<a href="${pageContext.request.contextPath}/board/boardList.htm">

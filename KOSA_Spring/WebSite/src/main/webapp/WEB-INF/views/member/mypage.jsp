@@ -18,9 +18,6 @@
 				<div id="content">
 					<form action="" method="post">
 						<h2>마이페이지</h2>
-						<h3 class="hidden">방문페이지 로그</h3>
-						<p id="breadscrumb" class="block_hlist clear"><img alt="Step1 개인정보 등록" src="images/step2.png" /></p>
-						<h3 class="hidden">회원가입 폼</h3>
 						<div id="join-form" class="join-form margin-large" >
 							<dl class="join-form-row">
 								<dt class="join-form-title">
@@ -32,7 +29,7 @@
 							</dl>	
 						</div>
 						<div id="buttonLine">
-						<input class="btn-okay button" type="submit" value="가입" />
+						<input class="btn-okay button"  type="submit" value="확인" />
 						</div>
 					</form>	
 					

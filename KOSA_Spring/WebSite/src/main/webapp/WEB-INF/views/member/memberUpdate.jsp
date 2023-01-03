@@ -60,8 +60,8 @@
 								</dt>
 								<dd class="join-form-data">
 									<select name="gender">
-										<option>남성</option>
-										<option>여성</option>
+										<option <c:if test="${member.gender eq '남성'}">selected</c:if>>남성</option>
+										<option <c:if test="${member.gender eq '여성'}">selected</c:if>>여성</option>
 									</select>
 								</dd>
 							</dl>
@@ -71,7 +71,7 @@
 									핸드폰 번호
 								</dt>
 								<dd class="join-form-data">
-									<input type="text" name="cphone" value="${member.cphone }"/><span>[대시(-)를 포함할 것: 예) 010-3456-2934]</span>
+									<input type="text" name="phone" value="${member.phone }"/><span>[대시(-)를 포함할 것: 예) 010-3456-2934]</span>
 								</dd>
 							</dl>
 							<dl class="join-form-row">
@@ -82,16 +82,7 @@
 									<input type="text" name="email" value="${member.email }"/>
 								</dd>
 							</dl>
-							<dl class="join-form-row">
-								<dt class="join-form-title">
-									취미
-								</dt>
-								<dd class="join-form-data habit">
-									<input type="checkbox" name="habit" id="music" /><label for="music">음악</label>
-									<input type="checkbox" name="habit" id="movie" /><label for="movie">영화</label>
-									<input type="checkbox" name="habit" id="trip" /><label for="trip">여행</label>
-								</dd>
-							</dl>						
+												
 						</div>
 						<div id="buttonLine">
 						<input class="btn-okay button" type="submit" value="수정" />
