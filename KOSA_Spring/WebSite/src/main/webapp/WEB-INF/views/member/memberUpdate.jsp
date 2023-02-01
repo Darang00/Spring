@@ -20,7 +20,7 @@
 						<h2>회원 정보 수정</h2>
 						<h3 class="hidden">방문페이지 로그</h3>
 						<p id="breadscrumb" class="block_hlist clear"><img alt="Step1 개인정보 등록" src="images/step2.png" /></p>
-						<h3 class="hidden">회원가입 폼</h3>
+						<h3 class="hidden">회원 정보 상세</h3>
 						<div id="join-form" class="join-form margin-large" >						
 							<dl class="join-form-row">
 								<dt class="join-form-title">
